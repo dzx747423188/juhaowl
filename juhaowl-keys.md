@@ -28,7 +28,14 @@ import 'element-ui/lib/theme-chalk/index.css'
 #### 05-项目-准备-项目模板简化-调整
 
 #### 06-项目-准备-git版本控制
-
-#### 01-项目-准备
-
+1. git init
+2. git status
+3. git add .
+4. git commit -m "park"
+5. 新建远程仓库
+6. git remote add origin git@github.com:dzx747423188/juhaowl.git
+7. git push -u origin master （之后直接git push）
+#### 07-项目-项目-登录-新建分支
+> 新建分支 git checkout -b dev-login
+> 新建组件 路由等
 #### 01-项目-准备
