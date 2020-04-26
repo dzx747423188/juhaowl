@@ -68,4 +68,13 @@ import 'element-ui/lib/theme-chalk/index.css'
 1. js编程式导航this.$router.push({name:'home'})
 2. App.vue  router-view
 3. 新建home组件
-4. 配置路由 index.js
+4. 配置路由 index.js 
+
+#### 11 项目-登录-简化登录请求代码-async 和 await
+> 让异步代码ajax看起来像同步代码
+1. 找到异步代码操作有结果的代码，前面加await 同时定义变量接收操作结果
+2. 找到距离异步操作有结果的代码最近的函数，前面添加async
+#### 12 项目-登录-保存token值
+> 目的: 如果用户没有登录 直接通过url访问
+> 在登录成功时，保存正确用户的token
+> 

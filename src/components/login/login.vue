@@ -32,9 +32,23 @@ export default {
 
       async handleLogin1(){
         const res =await this.$http.get('education/teacher/list/'+this.formData.page+'/'+this.formData.size)
-        console.log(res)
+        
+        const{
+          data,
+          code,
+          message
+        } = res.data
+        console.log(code)
         //登录成功 跳转home
-          this.$router.push({name:'home'})
+        //保存token
+        localStorage.setItem('token',code)
+        if(code === 10000){
+            this.$router.push({name:'home'})
+            this.$message.success(message)
+        }else{
+            this.$message.error(message);
+        }
+          
       },
 
 
