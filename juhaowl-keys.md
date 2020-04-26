@@ -63,3 +63,9 @@ import 'element-ui/lib/theme-chalk/index.css'
 #### 09 项目-登录
  > 使用提示框组件
    this.$message.success('成功')
+#### 10 项目-登录-登录成功进入home
+> 登录成功 ->进入home组件
+1. js编程式导航this.$router.push({name:'home'})
+2. App.vue  router-view
+3. 新建home组件
+4. 配置路由 index.js

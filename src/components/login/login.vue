@@ -34,6 +34,8 @@ export default {
         this.$http.get('education/teacher/list/'+this.formData.page+'/'+this.formData.size).then(res =>{
           console.log(res)
           //登录成功 跳转home
+          this.$router.push({name:'home'})
+          //提示登录成功
           this.$message.success('成功')
           //不成功 提示信息
         })
