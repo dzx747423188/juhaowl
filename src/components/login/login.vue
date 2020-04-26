@@ -11,7 +11,7 @@
       <el-form-item label="密码">
         <el-input type = "password" v-model="formData.password"></el-input>
       </el-form-item>
-      <el-button class="login-btn" type="primary" @click.prevent="handleLogin">登录</el-button>
+      <el-button class="login-btn" type="primary" @click.prevent="handleLogin1">登录</el-button>
     </el-form>
   </div>
 </template>
@@ -29,8 +29,16 @@ export default {
       };
     },
     methods:{
+
+      async handleLogin1(){
+        const res =await this.$http.get('education/teacher/list/'+this.formData.page+'/'+this.formData.size)
+        console.log(res)
+        //登录成功 跳转home
+          this.$router.push({name:'home'})
+      },
+
+
       handleLogin(){
-        console.log('test')
         this.$http.get('education/teacher/list/'+this.formData.page+'/'+this.formData.size).then(res =>{
           console.log(res)
           //登录成功 跳转home
