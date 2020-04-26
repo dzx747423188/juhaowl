@@ -38,4 +38,28 @@ import 'element-ui/lib/theme-chalk/index.css'
 #### 07-项目-项目-登录-新建分支
 > 新建分支 git checkout -b dev-login
 > 新建组件 路由等
-#### 01-项目-准备
+> 注意：
+1. commit每完成一个小功能就commit一次
+2. push操作master去完成
+#### 08-项目-登录
+> 自定义插件
+1. //插件模板
+    import axios from 'axios'
+    const MyPlugin = {}
+    MyPlugin.install =  (Vue) => {
+        //基准地址
+    axios.defaults.baseURL = 'http://localhost:13001'
+        // 4. 添加实例方法
+        Vue.prototype.$http = axios
+    }
+
+    export default MyPlugin
+2. 在main.js中使用插件 
+    Vue.use(MyPlugin)
+3.  this.$http.get(url).then(res =>{
+          console.log(res)
+          
+        })
+#### 09 项目-登录
+ > 使用提示框组件
+   this.$message.success('成功')

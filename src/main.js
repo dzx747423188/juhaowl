@@ -5,10 +5,13 @@ import Vue from 'vue'
 import ElementUI from 'element-ui'
 //引入样式文件
 import 'element-ui/lib/theme-chalk/index.css'
+import '@/assets/css/base.css'
 import App from './App'
 import router from './router'
+import MyPlugin from '@/plugins/http'
 //使用Vue插件
 Vue.use(ElementUI)
+Vue.use(MyPlugin)
 
 Vue.config.productionTip = false
 
